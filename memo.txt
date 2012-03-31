@@ -1,0 +1,52 @@
+
+#:実装するorしたい
+(value):デフォルト値
+
+world:
+	#gravity(0.0,-9.8)
+	#bodies
+	#joints
+	timestep
+	velocityIterations
+	positionIterations
+
+body:
+	#position(0.0,0.0)
+	#angle(0.0)
+	linearVelocity
+	angularVelocity
+	linearDamping
+	angularDamping
+	#fixedRotation(false)
+	#type(dynamic)
+	#gravityScale(1.0)
+	#fixtures
+
+fixture:
+	#shape
+	#friction(0.5)
+	#restitution(0.5)
+	#density(1.0)
+
+shape:
+	#type
+
+shape(circle):
+	#center(0.0,0.0)
+	#radius
+
+shape(edge):
+	#vertex1
+	#vertex2
+
+shape(polygon):
+	#vertexCount
+	#vertices
+
+shape(chain):
+	#vertexCount
+	#vertices
+
+joint:
+	type
+
