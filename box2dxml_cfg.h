@@ -3,6 +3,7 @@
 
 #include <Box2D/Box2D.h>
 #include <SDL/SDL.h>
+#include <string>
 
 namespace YPT {
 
@@ -22,6 +23,9 @@ extern int32 const POSITION_ITERATIONS;
 
 extern b2Vec2 const DEFAULT_GRAVITY;
 extern float const DEFAULT_VIEW_SCALE;
+extern std::string const DEFAULT_WORLD_FILE;
+
+extern std::string const WORLDS_DIR;
 
 } // YPT
 

@@ -5,6 +5,8 @@
 #include <cmath>
 #include <iomanip>
 #include <cstdlib>
+#include <cctype>
+#include <iterator>
 
 namespace {
 	// std::tolower は int (*)(int) なので都合が悪い

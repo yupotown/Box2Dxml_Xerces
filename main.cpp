@@ -9,7 +9,7 @@
 #include "box2dxml_cfg.h"
 #include "xmlworldreader.h"
 
-int main() {
+int main(int argc, char *argv[]) {
 
 	// --------------------------------------------------
 	// 初期化
@@ -69,9 +69,22 @@ int main() {
 	YPT::FPSController fpsctrl(YPT::FPS);
 
 	// ワールド読み込み
-	std::string worldFile("worlds/test.xml");
+	std::string worldFile;
 	YPT::XmlWorldReader worldReader(world);
-	if (!worldReader.Read(worldFile)) {
+	bool worldLoaded = false;
+	if (argc >= 2) {
+		worldFile = argv[1];
+		worldLoaded = worldReader.Read(YPT::WORLDS_DIR + "/" + worldFile);
+		if (!worldLoaded) {
+			worldFile += ".xml";
+			worldLoaded = worldReader.Read(YPT::WORLDS_DIR + "/" + worldFile);
+		}
+	}
+	if (!worldLoaded) {
+		worldFile = YPT::DEFAULT_WORLD_FILE;
+		worldLoaded = worldReader.Read(YPT::WORLDS_DIR + "/" + worldFile);
+	}
+	if (!worldLoaded) {
 		std::cerr << "loading world failed." << std::endl;
 	}
 

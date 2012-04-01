@@ -1,0 +1,87 @@
+
+<world name="default">
+	<gravity>0.0,-9.8</gravity>
+
+	<shape type="polygon" name="floor_part_1">
+		<vertexCount>4</vertexCount>
+		<vertices>
+			<v1>-6.0,-4.0</v1>
+			<v2>-6.0,-4.5</v2>
+			<v3>6.0,-4.5</v3>
+			<v4>6.0,-4.0</v4>
+		</vertices>
+	</shape>
+	<fixture name="floor_part_1">
+		<shape>floor_part_1</shape>
+		<density>1.0</density>
+		<restitution>0.5</restitution>
+		<friction>0.5</friction>
+	</fixture>
+	<body name="floor">
+		<type>static</type>
+		<fixtures>
+			<fixture>floor_part_1</fixture>
+		</fixtures>
+		<position>0.0,0.0</position>
+	</body>
+
+	<shape type="circle" name="circle1">
+		<radius>0.3</radius>
+	</shape>
+	<fixture name="circle1">
+		<shape>circle1</shape>
+	</fixture>
+	<body name="circle1">
+		<fixtures>
+			<fixture>circle1</fixture>
+		</fixtures>
+		<position>0.0,0.0</position>
+	</body>
+	<body name="circle1_2">
+		<fixtures>
+			<fixture>circle1</fixture>
+		</fixtures>
+		<position>0.1,0.3</position>
+	</body>
+
+	<shape type="polygon" name="box1">
+		<vertexCount>4</vertexCount>
+		<vertices>
+			<v1>0.0,0.0</v1>
+			<v2>0.4,0.0</v2>
+			<v3>0.4,1.8</v3>
+			<v4>0.0,1.8</v4>
+		</vertices>
+	</shape>
+	<fixture name="box1">
+		<shape>box1</shape>
+	</fixture>
+	<body name="box1">
+		<fixtures>
+			<fixture>box1</fixture>
+		</fixtures>
+		<position>-2.0,-4.0</position>
+	</body>
+	<body name="slope">
+		<type>static</type>
+		<fixtures>
+			<fixture>box1</fixture>
+		</fixtures>
+		<position>1.5,2.3</position>
+		<angle>-45</angle>
+	</body>
+
+	<shape type="circle" name="circle2">
+		<radius>0.6</radius>
+	</shape>
+	<fixture name="circle2">
+		<shape>circle2</shape>
+	</fixture>
+	<body name="circle2">
+		<fixtures>
+			<fixture>circle2</fixture>
+		</fixtures>
+		<position>2.7,4.0</position>
+	</body>
+</world>
+

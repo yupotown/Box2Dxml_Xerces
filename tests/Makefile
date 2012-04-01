@@ -12,15 +12,18 @@ LIBS		= -lBox2D $(LIBXML2_CONFIG) $(SDL_CONFIG) -lSDL_image -lSDL_draw
 TARGET_CONVERT	= test_convert
 OBJS_CONVERT	= test_convert.o ../convert.o
 
+TARGET	= $(TARGET_CONVERT)
+
 .PHONY: all clean
 
 all: $(TARGET_CONVERT)
-
-include ../Makefile
 
 #$(TARGET): $(OBJS)
 #	$(CXX) $(LDFLAGS) -o $@ $+ $(LIBS)
 
 $(TARGET_CONVERT): $(OBJS_CONVERT)
 	$(CXX) $(LDFLAGS) -o $@ $+ $(LIBS)
+
+clean:
+	$(RM) $(TARGET) *.o
 

@@ -4,7 +4,7 @@
 
 namespace YPT {
 
-const double PI = std::acos(-1);
+const double PI = std::acos(-1.0f);
 
 } // YPT
 

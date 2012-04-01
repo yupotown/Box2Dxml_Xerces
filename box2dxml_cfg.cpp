@@ -25,7 +25,11 @@ int32 const POSITION_ITERATIONS = 10;
 
 // デフォルト設定
 b2Vec2 const DEFAULT_GRAVITY(0.0f, -9.8f);
-float const DEFAULT_VIEW_SCALE = 20.0f;
+float const DEFAULT_VIEW_SCALE = 48.0f;
+std::string const DEFAULT_WORLD_FILE("default.xml");
+
+// ディレクトリ
+std::string const WORLDS_DIR("./worlds");
 
 } // YPT
 
