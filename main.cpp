@@ -106,6 +106,26 @@ int main(int argc, char *argv[]) {
 			case SDL_QUIT:
 				quit = true;
 				break;
+			case SDL_MOUSEBUTTONDOWN:
+				{
+					// クリックした位置に半径50cmの円を作成
+					b2BodyDef bodyDef;
+					bodyDef.type = b2_dynamicBody;
+					bodyDef.position = bodyDrawer.ViewPosToWorldPos(
+						static_cast< Sint32 >(event.button.x + bufScreenRect.x),
+						static_cast< Sint32 >(event.button.y + bufScreenRect.y)
+					);
+					b2Body *body = world.CreateBody(&bodyDef);
+					b2CircleShape shape;
+					shape.m_radius = 0.5f;
+					b2FixtureDef fixtureDef;
+					fixtureDef.shape = &shape;
+					fixtureDef.density = 1.0f;
+					fixtureDef.friction = 0.5f;
+					fixtureDef.restitution = 0.5f;
+					body->CreateFixture(&fixtureDef);
+				}
+				break;
 			default:
 				break;
 			}
