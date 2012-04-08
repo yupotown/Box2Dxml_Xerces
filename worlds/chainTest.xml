@@ -1,0 +1,45 @@
+
+<world name="chainTest">
+
+	<gravity>0.0,-9.8</gravity>
+
+	<shape type="chain" name="floor">
+		<vertexCount>4</vertexCount>
+		<vertices>
+			<v1>-6,1</v1>
+			<v2>-5,0</v2>
+			<v3>5,0</v3>
+			<v4>6,1</v4>
+		</vertices>
+	</shape>
+	<fixture name="floor">
+		<shape>floor</shape>
+	</fixture>
+	<body name="floor">
+		<position>0,-4.5</position>
+		<type>static</type>
+		<fixtures>
+			<fixture>floor</fixture>
+		</fixtures>
+	</body>
+
+	<shape type="polygon" name="box">
+		<vertexCount>4</vertexCount>
+		<vertices>
+			<v1>-0.5,0.5</v1>
+			<v2>-0.5,-0.5</v2>
+			<v3>0.5,-0.5</v3>
+			<v4>0.5,0.5</v4>
+		</vertices>
+	</shape>
+	<fixture name="box">
+		<shape>box</shape>
+	</fixture>
+	<body name="box">
+		<fixtures>
+			<fixture>box</fixture>
+		</fixtures>
+		<position>-3,0</position>
+
+</world>
+
