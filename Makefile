@@ -35,5 +35,5 @@ clean:
 	$(RM) $(TARGET) *.o
 
 todo:
-	grep -in "TODO" *.cpp *.h *.hpp
+	grep -in "TODO" *.cpp *.h *.hpp | cat TODO -
 
