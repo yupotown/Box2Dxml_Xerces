@@ -1,0 +1,128 @@
+
+<world name="trampoline">
+	<shape type="polygon" name="trampoline">
+		<vertexCount>4</vertexCount>
+		<vertices>
+			<v1>-1.5,0.2</v1>
+			<v2>-1.5,-0.2</v2>
+			<v3>1.5,-0.2</v3>
+			<v4>1.5,0.2</v4>
+		</vertices>
+	</shape>
+	<fixture name="trampoline">
+		<shape>trampoline</shape>
+		<restitution>1.0</restitution>
+	</fixture>
+
+	<body>
+		<fixtures>
+			<fixture>trampoline</fixture>
+		</fixtures>
+		<type>static</type>
+		<position>0.0,-4.0</position>
+	</body>
+
+	<body>
+		<fixtures>
+			<fixture>trampoline</fixture>
+		</fixtures>
+		<type>static</type>
+		<position>-2.9,-3.25</position>
+		<angle>-30</angle>
+	</body>
+
+	<body>
+		<fixtures>
+			<fixture>trampoline</fixture>
+		</fixtures>
+		<type>static</type>
+		<position>-5.3,-1.4</position>
+		<angle>-45</angle>
+	</body>
+
+	<body>
+		<fixtures>
+			<fixture>trampoline</fixture>
+		</fixtures>
+		<type>static</type>
+		<position>-5.6,1.2</position>
+		<angle>-120</angle>
+	</body>
+
+	<body>
+		<fixtures>
+			<fixture>trampoline</fixture>
+		</fixtures>
+		<type>static</type>
+		<position>2.9,-3.25</position>
+		<angle>30</angle>
+	</body>
+
+	<body>
+		<fixtures>
+			<fixture>trampoline</fixture>
+		</fixtures>
+		<type>static</type>
+		<position>5.3,-1.4</position>
+		<angle>45</angle>
+	</body>
+
+	<body>
+		<fixtures>
+			<fixture>trampoline</fixture>
+		</fixtures>
+		<type>static</type>
+		<position>5.6,1.2</position>
+		<angle>120</angle>
+	</body>
+
+	<shape type="circle" name="ball">
+		<radius>0.4</radius>
+	</shape>
+	<fixture name="ball">
+		<shape>ball</shape>
+		<restitution>1.0</restitution>
+	</fixture>
+	<!--
+	<body>
+		<fixtures><fixture>ball</fixture></fixtures>
+		<position>0.0,7.0</position>
+	</body>
+	-->
+	<body>
+		<fixtures><fixture>ball</fixture></fixtures>
+		<position>-3.0,1.0</position>
+	</body>
+	<!--
+	<body>
+		<fixtures><fixture>ball</fixture></fixtures>
+		<position>4.0,4.0</position>
+	</body>
+	-->
+
+	<shape type="polygon" name="box">
+		<vertexCount>4</vertexCount>
+		<vertices>
+			<v1>-0.3,0.3</v1>
+			<v2>-0.3,-0.3</v2>
+			<v3>0.3,-0.3</v3>
+			<v4>0.3,0.3</v4>
+		</vertices>
+	</shape>
+	<fixture name="box">
+		<shape>box</shape>
+		<restitution>1.0</restitution>
+	</fixture>
+	<body>
+		<fixtures><fixture>box</fixture></fixtures>
+		<position>3.0,4.0</position>
+	</body>
+	<!--
+	<body>
+		<fixtures><fixture>box</fixture></fixtures>
+		<position>-1.5,4.5</position>
+	</body>
+	-->
+
+</world>
+
